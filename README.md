@@ -3,8 +3,7 @@
 ## Deep Q Network for raffic lights control
 The states transformation principle is shown in the graph:
 
-![States Transformation Graph](https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/states.png)
-
+<img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/states.png" width="25%">
 States representation:
 
 0: Green 1 & Red 2\
@@ -20,8 +19,11 @@ Actions representation:
 ①: keep on
 
 ### one-way-two-queue intersection
-![one-way-two-queue](https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/one_way_two_queue.png)
+
+<img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/one_way_two_queue.png" width="25%">
 ### linear-network intersections
-![linear-network](https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/linear_network.png)
+<img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/linear_network.png" width="40%">
+
 ### grid-square-network intersections
-![grid_square-network](https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/grid_square_network.png)
+<img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/grid_square_network.png" width="40%">
+
