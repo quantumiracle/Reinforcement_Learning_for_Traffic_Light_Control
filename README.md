@@ -1,6 +1,5 @@
-# DQN_traffic_light_control
 
-## Deep Q Network for raffic lights control
+# Deep Q Network for raffic lights control
 The states transformation principle is shown in the graph:
 
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/states.png" width="25%">
@@ -18,15 +17,15 @@ Actions representation:
 ⓪: change state\
 ①: keep on
 
-### one-way-two-queue intersection
+## one-way-two-queue intersection
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/one_way_two_queue.png" width="25%">
 The training curve:
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/states.png" width="25%">
 
-### linear-network intersections
+## linear-network intersections
 Noticing that we don't care much about the outcoming roads, which is denoted by dashed lines.
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/linear_network.png" width="40%">
 
-### grid-square-network intersections
+## grid-square-network intersections
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/grid_square_network.png" width="40%">
 
