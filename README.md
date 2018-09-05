@@ -34,6 +34,7 @@ Code in **./linear_network/** with `<python lights.py --train>` to use.
 
 ## grid-square-network intersections
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/grid_square_network.png" width="40%">
+
 States transformation in experiments:
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/4*4.png" width="40%">
 The training curve:
