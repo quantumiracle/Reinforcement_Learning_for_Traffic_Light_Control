@@ -3,7 +3,7 @@
 The states transformation principle is shown in the graph:
 
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/states.png" width="25%">
-__States__ representation:
+**States** representation:
 
 0: Green 1 & Red 2\
 1: Red 1 & Green 2\
@@ -19,11 +19,13 @@ __Actions__ representation:
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/one_way_two_queue.png" width="25%">
 The training curve:
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/train.png" width="40%">
-Code in __./one_way_two_queue/__ with `<python light_constr.py --train>` to use.
+
+Code in **./one_way_two_queue/** with `<python light_constr.py --train>` to use.
 
 ## linear-network intersections
 Noticing that we don't care much about the outcoming roads, which is denoted by dashed lines.
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/linear_network.png" width="40%">
+
 States transformation in experiments:
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/2*1.png" width="40%">
 
