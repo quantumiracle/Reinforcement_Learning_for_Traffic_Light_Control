@@ -1,6 +1,6 @@
 # DQN_traffic_light_control
 
-## Deep Q Neural Network for single cross-road traffic light
+## Deep Q Network for raffic lights control
 The states transformation principle is shown in the graph:
 
 ![States Transformation Graph](https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/states.png)
