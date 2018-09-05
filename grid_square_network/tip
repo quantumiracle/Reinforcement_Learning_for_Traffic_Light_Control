@@ -1,0 +1,21 @@
+python若在init内赋值数组等，相当于该变量（car_nums）为类内变量而非成员变量，不同实例化共享该变量。
+class crossing:
+    def __init__(
+            self,
+            light_state,
+            q_states,
+            car_nums=np.array([0,0,0,0]),
+    ):
+        self.car_nums=car_nums
+
+只有在init内不赋值，或赋值为单个数，如=0,这样该变量在实例化成员间不共享。
+class crossing:
+    def __init__(
+            self,
+            light_state,
+            q_states,
+            car_nums,
+    ):
+        self.car_nums=car_nums
+
+crossing(...,car_nums=np.array([0,0,0,0]))即在实例化时赋值即可。
