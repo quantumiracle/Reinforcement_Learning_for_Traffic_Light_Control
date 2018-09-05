@@ -19,9 +19,12 @@ Actions representation:
 ①: keep on
 
 ### one-way-two-queue intersection
-
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/one_way_two_queue.png" width="25%">
+The training curve:
+<img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/states.png" width="25%">
+
 ### linear-network intersections
+Noticing that we don't care much about the outcoming roads, which is denoted by dashed lines.
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/linear_network.png" width="40%">
 
 ### grid-square-network intersections
