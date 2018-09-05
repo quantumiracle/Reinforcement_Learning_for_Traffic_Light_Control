@@ -1,7 +1,7 @@
 # DQN_traffic_light_control
 
 ## Deep Q Neural Network for single cross-road traffic light
-The states transformation principles is shown in the graph:
+The states transformation principle is shown in the graph:
 
 ![States Transformation Graph](https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/states.png)
 
@@ -16,5 +16,12 @@ States representation:
 
 Actions representation:
 
-0: change state\
-1: keep on
+⓪: change state\
+①: keep on
+
+### one-way-two-queue intersection
+![one-way-two-queue](https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/one_way_two_queue.png)
+### linear-network intersections
+![linear-network](https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/linear_network.png)
+### grid-square-network intersections
+![grid_square-network](https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/grid_square_network.png)
