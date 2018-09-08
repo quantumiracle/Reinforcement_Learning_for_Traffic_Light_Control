@@ -17,6 +17,20 @@ __Actions__ representation:
 ①: keep on
 
 ## one-way-two-queue intersection
+It is one intersection with only two unidirectional roads, no left or right turning. The number of cars on each road is denoted as ![equ.1](https://latex.codecogs.com/gif.latex?Q_1,&space;Q_2\in&space;I) respectively. The state of the traffic light is denoted by state S, which can be in one of the following four states
+
+* "0": green light for road Q_1, and hence red light for road Q_2;
+* "1": red light for road Q_1, and hence green light for road Q_1;
+* "2": yellow light for Q_1, and red light for road Q_2;
+* "3": red light for road Q_1, and yellow light for road Q_2;
+
+And the transition of states, which is called the action in RL algorithm, can be:
+
+* "0": change;
+* "1": keep on;
+
+According to general transportation principles, the state transition of traffic lights could only be unidirectional, which is ![equ.1](https://latex.codecogs.com/gif.latex?"0"\rightarrow{"2"}\rightarrow{"1"}\rightarrow{"3"}\rightarrow{"0"}) under our definition of light states above. The trained RL agent takes the tuple [Q_1, Q_2, S] as input and generates action choice for traffic light.
+
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/one_way_two_queue.png" width="25%">
 The training curve:
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/train.png" width="40%">
