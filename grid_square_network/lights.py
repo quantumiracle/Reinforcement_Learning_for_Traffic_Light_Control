@@ -166,7 +166,7 @@ if args.train:
         reward_set.append(reward)
         step_set.append(steps)
         #plt.scatter(steps, reward)
-        obs=obs_
+
         
 
     plt.plot(step_set,reward_set)
