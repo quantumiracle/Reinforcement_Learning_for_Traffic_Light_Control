@@ -1,5 +1,6 @@
 
 # Deep Q Network for traffic lights control
+### (More about model description, see in _Intelligent Transportation System.md_.)
 The states transformation principle is shown in the graph:
 
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/states.png" width="25%">
