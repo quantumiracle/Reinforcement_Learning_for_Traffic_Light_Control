@@ -1,6 +1,8 @@
 
 # Deep Q Network for traffic lights control
 ### (More about model description, see in _Intelligent Transportation System.md_)
+[_Deep Reinforcement Learning for Intelligent Transportation Systems_ NIPS 2018 Workshop MLITS](https://openreview.net/forum?id=BJl846ey97)
+
 The states transformation principle is shown in the graph:
 
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/states.png" width="25%">
