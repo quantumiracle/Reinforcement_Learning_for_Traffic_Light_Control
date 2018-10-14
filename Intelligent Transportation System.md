@@ -28,9 +28,9 @@ Each agent for controlling a single intersection. They could be the same agent i
 
 Interactions among multiple agents will definitely increase input information of each agent, which will broaden the view of each agent to reach a more global (more global still means local) optimal policy.
 
-#Parallelism in training:
+# Parallelism in training:
 
-We could use multiple threads or multiple processes for accelerating the sampling process, if CPU consumption is too much compared with the GPU backpropagation process. And what if GPU consumption is too much? As the network could only be updated in a single process (or thread), multiple processes updating the network will cause chaos. Should we copy the network for multiple processes backpropagation like we copy the environment in multiple processes sampling process?
+We could use multiple threads or multiple processes for accelerating the sampling process, if CPU consumption is too much compared with the GPU backpropagation process.（we did this in our multithread version model.） And what if GPU consumption is too much? As the network could only be updated in a single process (or thread), multiple processes updating the network will cause chaos. Should we copy the network for multiple processes backpropagation like we copy the environment in multiple processes sampling process?
 
 # General in Reinforcement Learning:
 
