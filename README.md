@@ -46,7 +46,7 @@ Noticing that we don't care much about the outcoming roads, which is denoted by 
 
 States transformation in experiments: the color of lights is 'green' or 'red' or 'yellow'. The black rectangular represents incoming car for periphery of road networks. The numbers indicates number of cars on each road. If the light is 'green', the number of cars in that road will reduce the number of passing cars after transition. If there is 'black rectangular', the number of cars in the correspongding road will increase one after transition. The upper image is the state before transition, while the lower image is the state after transition. 
 
-<img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/2*1.png" width="25%">
+<img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/Screenshot.png" width="60%">
 
 
 Code in **./linear_network/** with `<python lights.py --train>` to use.
