@@ -107,7 +107,7 @@ if args.train:
                 #'0''1''0''0''0''0''0''0''0'(storing in action set), each action is either '0' or '1',
                 #for 'change state' or 'keep on'. The binary number is set to be (grid_x*grid_y) bits, 
                 # correspongding to the number of crossroads in grid. 
-                action_set[xx][yy]=int(int2bin(action,grid_x*grid_y)[(xx-1)*grid_y+yy-1])
+                action_set[xx][yy]=int(int2bin(action,grid_x*grid_y)[(xx)*grid_y+yy-1])
                 peri_cars[xx][yy], in_cars[xx][yy]=cross[lab].state_change(action_set[xx][yy])
                 
         #interactions among crossroads        
@@ -166,7 +166,7 @@ if args.train:
         reward_set.append(reward)
         step_set.append(steps)
         #plt.scatter(steps, reward)
-        obs=obs_
+
         
 
     plt.plot(step_set,reward_set)

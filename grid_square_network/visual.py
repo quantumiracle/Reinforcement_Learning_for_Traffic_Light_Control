@@ -41,10 +41,11 @@ class Visual:
                 self.canvas.create_oval(times*xx-b+bias, times*yy-b, times*xx+b+bias, times*yy+b, fill= cross_lr)
                 self.canvas.create_oval(times*xx-b, times*yy-b-bias, times*xx+b, times*yy+b-bias, fill=cross_ud)
                 self.canvas.create_oval(times*xx-b, times*yy-b+bias, times*xx+b, times*yy+b+bias, fill=cross_ud)
-
-                self.canvas.create_text(times*xx-bias_t, times*yy,text=cross[lab].car_nums[2])
-                self.canvas.create_text(times*xx+bias_t, times*yy,text=cross[lab].car_nums[3])
-                self.canvas.create_text(times*xx, times*yy-bias_t,text=cross[lab].car_nums[0])
+               
+               #line 74
+                self.canvas.create_text(times*xx-bias_t, times*yy,text=cross[lab].car_nums[3])
+                self.canvas.create_text(times*xx+bias_t, times*yy,text=cross[lab].car_nums[0])
+                self.canvas.create_text(times*xx, times*yy-bias_t,text=cross[lab].car_nums[2])
                 self.canvas.create_text(times*xx, times*yy+bias_t,text=cross[lab].car_nums[1])
         
 
@@ -69,7 +70,8 @@ class Visual:
                 #     else:
                 #         if peri_cars[xx][yy][2]>0:
                 #             self.canvas.create_rectangle(times*xx-b-bias_, times*yy-b, times*xx+b-bias_, times*yy+b,fill = 'black')
-                        
+                
+                #2301
                 # elif xx == grid_x:
                 #     if yy==grid_y:
                 #         if peri_cars[xx][yy][1]>0:
