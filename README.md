@@ -7,6 +7,7 @@ The states transformation principle is shown in the graph:
 <p align="center">
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/states4.png" width="40%">
 </p>
+
 __States__ representation:
 
 0: Green 1 & Red 2\
@@ -14,7 +15,7 @@ __States__ representation:
 2: Yellow 1 & Red 2\
 3: Red 1 & Yellow 2
 
-__Actions__ representation:
+__Actions__ representation: (contrary to in paper)
 
 ⓪: change state\
 ①: keep on
@@ -61,7 +62,7 @@ The training curve:
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/train1.png" width="40%">
 </p>
 
-Code in **./linear_network/** with `<python lights.py --train>` to use.
+Code in **./2.two_intersections(linear)/** with `<python lights.py --train>` to run.
 
 ## grid-square-network intersections
 <p align="center">
@@ -78,4 +79,14 @@ The training curve:
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/2*2_100m.png" width="40%">
 </p>
 
-Code in **./one_way_two_queue/** with `<python lights.py --train>` to use.
+Code in **./grid_square_network/** with `<python lights.py --train>` to run.
+
+## Multi-thread version code for grid network
+
+Code in **./4.multithread_for_grid/** with `<python lights.py --train>` to run.
+
+## Agent for single intersection
+
+Code in **./one_agent_for_each_intersection/** with `python lights.py --train` or `python lights_re.py --train` to run.
+
+## DDPG version code for grid network
