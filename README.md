@@ -20,7 +20,7 @@ __Actions__ representation: (contrary to in paper)
 ⓪: change state\
 ①: keep on
 
-## one-way-two-queue intersection
+## One-way-two-queue intersection
 It is one intersection with only two unidirectional roads, no left or right turning. The number of cars on each road is denoted as ![equ.1](https://latex.codecogs.com/gif.latex?Q_1,&space;Q_2\in&space;I) respectively. The state of the traffic light is denoted by state S, which can be in one of the following four states
 
 * "0": green light for road Q_1, and hence red light for road Q_2;
@@ -45,7 +45,7 @@ The training curve:
 
 Code in **./one_way_two_queue/** with `<python light_constr.py --train>` to use.
 
-## linear-network intersections
+## Linear-network intersections
 Noticing that we don't care much about the outcoming roads, which is denoted by dashed lines.
 <p align="center">
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/linear_network5.png" width="70%">
@@ -64,7 +64,7 @@ The training curve:
 
 Code in **./2.two_intersections(linear)/** with `<python lights.py --train>` to run.
 
-## grid-square-network intersections
+## Grid-square-network intersections
 <p align="center">
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/grid_square_network.png" width="40%">
  </p>
