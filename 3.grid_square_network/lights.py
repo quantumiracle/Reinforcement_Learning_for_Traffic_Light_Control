@@ -107,7 +107,7 @@ if args.train:
                 #'0''1''0''0''0''0''0''0''0'(storing in action set), each action is either '0' or '1',
                 #for 'change state' or 'keep on'. The binary number is set to be (grid_x*grid_y) bits, 
                 # correspongding to the number of crossroads in grid. 
-                action_set[xx][yy]=int(int2bin(action,grid_x*grid_y)[(xx)*grid_y+yy-1])
+                action_set[xx][yy]=int(int2bin(action,grid_x*grid_y)[(xx-1)*grid_y+yy-1])
                 peri_cars[xx][yy], in_cars[xx][yy]=cross[lab].state_change(action_set[xx][yy])
                 
         #interactions among crossroads        
@@ -145,7 +145,7 @@ if args.train:
             for yy in y:
                 lab=str(xx)+str(yy)
                 for i in range (4): 
-                    reward = reward - cross[lab].car_nums[i]**2 - cross[lab].car_nums[i]**2
+                    reward = reward - cross[lab].car_nums[i]**2
         #show the result of state tranformation in another diagram 'visual_after', i.e. the result of 'visual_before'
         visual.visual_after(cross,x,y,times,b,bias,bias_t)
         time.sleep(10)
@@ -166,7 +166,7 @@ if args.train:
         reward_set.append(reward)
         step_set.append(steps)
         #plt.scatter(steps, reward)
-
+	obs=obs_
         
 
     plt.plot(step_set,reward_set)
@@ -174,49 +174,51 @@ if args.train:
     RL.store()
     plt.show()
     #RL.plot_cost()
-if args.test:
-    cross1=crossing(light_state=0,q_states=[0,0,0,1])
-    cross2=crossing(light_state=0,q_states=[0,0,1,0])
-    RL.restore()
-    for steps in range(1000):
-        obs=np.concatenate((cross1.car_nums, cross1.light_state, cross2.car_nums, cross2.light_state),axis=None)
-        # print(obs)
-        action=RL.choose_action(obs)
-        if action == 0:
-            action1 =0
-            action2 =0
-        elif action ==1:
-            action1 =1
-            action2 =0
-        elif action ==2:
-            action1 =0
-            action2 =1
-        elif action ==3:
-            action1 =1
-            action2 =1
 
-        peri_cars1, in_cars1 = cross1.state_change(action1)
-        peri_cars2, in_cars2 = cross2.state_change(action2)
-        reward=0
-        for i in range (4):
-            if cross2.q_states[i]==1:
-                cross2.car_nums[i]+=in_cars1
-            if cross1.q_states[i]==1:
-                cross1.car_nums[i]+=in_cars2
-            reward = reward - cross1.car_nums[i]**2 - cross2.car_nums[i]**2
+    
+# if args.test:
+#     cross1=crossing(light_state=0,q_states=[0,0,0,1])
+#     cross2=crossing(light_state=0,q_states=[0,0,1,0])
+#     RL.restore()
+#     for steps in range(1000):
+#         obs=np.concatenate((cross1.car_nums, cross1.light_state, cross2.car_nums, cross2.light_state),axis=None)
+#         # print(obs)
+#         action=RL.choose_action(obs)
+#         if action == 0:
+#             action1 =0
+#             action2 =0
+#         elif action ==1:
+#             action1 =1
+#             action2 =0
+#         elif action ==2:
+#             action1 =0
+#             action2 =1
+#         elif action ==3:
+#             action1 =1
+#             action2 =1
 
-        obs_=np.concatenate((cross1.car_nums, cross1.light_state, cross2.car_nums, cross2.light_state),axis=None)
+#         peri_cars1, in_cars1 = cross1.state_change(action1)
+#         peri_cars2, in_cars2 = cross2.state_change(action2)
+#         reward=0
+#         for i in range (4):
+#             if cross2.q_states[i]==1:
+#                 cross2.car_nums[i]+=in_cars1
+#             if cross1.q_states[i]==1:
+#                 cross1.car_nums[i]+=in_cars2
+#             reward = reward - cross1.car_nums[i]**2 - cross2.car_nums[i]**2
 
-        if steps%50==0:
-            print(reward)
+#         obs_=np.concatenate((cross1.car_nums, cross1.light_state, cross2.car_nums, cross2.light_state),axis=None)
+
+#         if steps%50==0:
+#             print(reward)
         
-        obs=obs_
-        steps+=1
-        reward_set.append(reward)
-        step_set.append(steps)
-    plt.plot(step_set,reward_set)
-    plt.savefig('test2.png')
-    plt.show()
+#         obs=obs_
+#         steps+=1
+#         reward_set.append(reward)
+#         step_set.append(steps)
+#     plt.plot(step_set,reward_set)
+#     plt.savefig('test2.png')
+#     plt.show()
     
 
         
