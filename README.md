@@ -20,7 +20,7 @@ __Actions__ representation: (contrary to in paper)
 ⓪: change state\
 ①: keep on
 
-##Getting Started
+## Getting Started
 
 To run this repo, you need to use **Pyhton 3.5**.
 
