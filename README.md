@@ -20,7 +20,12 @@ __Actions__ representation: (contrary to in paper)
 ⓪: change state\
 ①: keep on
 
+##Getting Started
+
+To run this repo, you need to use **Pyhton 3.5**.
+
 ## One-way-two-queue intersection
+
 It is one intersection with only two unidirectional roads, no left or right turning. The number of cars on each road is denoted as ![equ.1](https://latex.codecogs.com/gif.latex?Q_1,&space;Q_2\in&space;I) respectively. The state of the traffic light is denoted by state S, which can be in one of the following four states
 
 * "0": green light for road Q_1, and hence red light for road Q_2;
@@ -43,7 +48,7 @@ The training curve:
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/train.png" width="40%">
 </p>
 
-Code in **./one_way_two_queue/** with `<python light_constr.py --train>` to use.
+Code in **./1.one_way_two_queue/** with `<python light_constr.py --train>` to run.
 
 ## Linear-network intersections
 Noticing that we don't care much about the outcoming roads, which is denoted by dashed lines.
@@ -68,18 +73,18 @@ Code in **./2.two_intersections(linear)/** with `<python lights.py --train>` to 
 <p align="center">
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/grid_square_network.png" width="40%">
  </p>
- 
+
 States transformation in experiments:
   <p align="center">
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/4*4.png" width="50%">
   </p>
-  
+
 The training curve:
  <p align="center">
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/2*2_100m.png" width="40%">
 </p>
 
-Code in **./grid_square_network/** with `<python lights.py --train>` to run.
+Code in **./3.grid_square_network/** with `<python lights.py --train>` to run.
 
 ## Multi-thread version code for grid network
 
@@ -87,6 +92,8 @@ Code in **./4.multithread_for_grid/** with `<python lights.py --train>` to run.
 
 ## Agent for single intersection
 
-Code in **./one_agent_for_each_intersection/** with `python lights.py --train` or `python lights_re.py --train` to run.
+Code in **./5.one_agent_for_each_intersection/** with `python lights.py --train` or `python lights_re.py --train` to run.
 
 ## DDPG version code for grid network
+
+Code in **./6.ddpg_for_grid_network/** with `<python -m run.py --alg=ddpg --num_timesteps=1e4 --train/retrain/test>` to run.
