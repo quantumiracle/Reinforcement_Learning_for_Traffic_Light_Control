@@ -11,8 +11,8 @@ The states transformation principle is shown in the graph:
 __States__ representation:
 
 ''0'': green light for direction 1 and hence red light for direction 2;\
-''1'': yellow light for direction 1 and hence red light for direction 2;\
-''2'': green light for direction 2 and hence red light for direction 2;\
+''1'': green light for direction 2 and hence red light for direction 2;\
+''2'': yellow light for direction 1 and hence red light for direction 2;\
 ''3'': yellow light for direction 2 and hence red light for direction 2.
 
 __Actions__ representation: (contrary to in paper)
