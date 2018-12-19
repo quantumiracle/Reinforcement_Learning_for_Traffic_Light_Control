@@ -5,7 +5,7 @@
 
 The states transformation principle is shown in the graph:
 <p align="center">
-<img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/states4.png" width="40%">
+<img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/states.png" width="40%">
 </p>
 
 __States__ representation:
