@@ -35,23 +35,23 @@ Running the code in different categories:
 
  **./1.one_way_two_queue**:
 
->python light_constr.py --train/test
+`python light_constr.py --train/test`
 
 **./2.two_intersections(linear)**:
 
->python lights.py --train/test
+`python lights.py --train/test`
 
 **./3.grid_square_network**:
 
->python lights.py --train/test
+`python lights.py --train/test`
 
 **./4.multithread_for_grid**:
 
-> python lights.py --train/test
+`python lights.py --train/test`
 
 **./5.one_agent_for_each_intersection**:
 
-> python lights_re.py --train/test
+```python lights_re.py --train/test```
 
 #### Deep Deterministic Policy Gradients (DDPG):
 
@@ -59,7 +59,7 @@ Generally, use `python -m run.py --alg=ddpg --num_timesteps=xxx --train` for tra
 
 **./6.ddpg_for_single** , **./7.ddpg_for_linear**  and **./8.ddpg_for_grid**:
 
-> python -m run.py --alg=ddpg --num_timesteps=1e4 --train/test/retrain
+`python -m run.py --alg=ddpg --num_timesteps=1e4 --train/test/retrain`
 
 
 
@@ -86,11 +86,15 @@ According to general transportation principles, the state transition of traffic 
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/1inter.png" width="25%">
 </p>
 
+
+
 #### Training:
 
 <p align="center">
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/train.png" width="40%">
 </p>
+
+
 Code in  **./1.one_way_two_queue**.
 
 ## Linear-Network Intersections
@@ -101,6 +105,8 @@ Linear network model is combined with multiple single intersections on a line, a
 <p align="center">
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/linear_network5.png" width="70%">
 </p>
+
+
 #### Visualized Simulation in Experiments: 
 
 the color of lights is 'green' or 'red' or 'yellow'. The black rectangular represents incoming car for periphery of road networks. The numbers indicates number of cars on each road. If the light is 'green', the number of cars in that road will reduce the number of passing cars after transition. If there is 'black rectangular', the number of cars in the corresponding road will increase one after transition. The upper image is the state before transition, while the lower image is the state after transition. 
@@ -108,11 +114,15 @@ the color of lights is 'green' or 'red' or 'yellow'. The black rectangular repre
 <p align="center">
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/Screenshot.png" width="60%">
 </p>
+
+
 #### Training:
 
 <p align="center">
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/train1.png" width="40%">
 </p>
+
+
 Code in **./2.two_intersections(linear)**.
 
 ## Grid-Square-Network Intersections
@@ -123,16 +133,22 @@ Code in **./2.two_intersections(linear)**.
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/grid_square_network.png" width="40%">
  </p>
 
+
+
 #### Visualized Simulation in Experiments: 
 
   <p align="center">
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/4*4.png" width="50%">
   </p>
+
+
 #### Training:
 
  <p align="center">
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/2*2_100m.png" width="40%">
 </p>
+
+
 Code in **./3.grid_square_network**.
 
 ## Multi-thread version code for grid network
@@ -159,6 +175,8 @@ Basic environments are similar with for DQN, only with main/branch road differen
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/ddpg4single.pdf" width="40%">
 </p>
 
+
+
  Code in **./6.ddpg_for_single**.
 
 ## Linear-Network Intersections
@@ -169,6 +187,8 @@ Testing of 10*1 linear network.
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/ddpg4linear.pdf" width="40%">
 </p>
 
+
+
 Code in **./7.ddpg_for_linear**.
 
 ## Grid-Square-Network Intersections
@@ -178,5 +198,7 @@ Testing of 10*5 grid network.
 <p align="center">
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/ddpg4grid.png" width="40%">
 </p>
+
+
 
 Code in **./8.ddpg_for_grid**.
