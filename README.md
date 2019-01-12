@@ -57,7 +57,7 @@ Running the code in different categories:
 
 Generally, use `python -m run.py --alg=ddpg --num_timesteps=xxx --train` for training, `python -m run.py --alg=ddpg --num_timesteps=xxx --test` for testing and `python -m run.py --alg=ddpg --num_timesteps=xxx --retrain` for retraining from last saved checkpoint.
 
-**./6.ddpg_for_single** , **./7.ddpg_for_linear**  and **./8.ddpg_for_grid**:
+**./6.ddpg_for_single**, **./7.ddpg_for_linear**  and **./8.ddpg_for_grid**:
 
 `python -m run.py --alg=ddpg --num_timesteps=1e4 --train/test/retrain`
 
@@ -138,7 +138,7 @@ Code in **./2.two_intersections(linear)**.
 #### Visualized Simulation in Experiments: 
 
   <p align="center">
-<img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/4*4.png" width="50%">
+<img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/4*4.png" width="35%">
   </p>
 
 
@@ -172,7 +172,7 @@ Basic environments are similar with for DQN, only with main/branch road differen
 ## Single Bidirectional Intersection (four roads)
 
 <p align="center">
-<img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/ddpg4single.pdf" width="40%">
+<img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/ddpg4single.png" width="40%">
 </p>
 
 
@@ -184,7 +184,7 @@ Basic environments are similar with for DQN, only with main/branch road differen
 Testing of 10*1 linear network.
 
 <p align="center">
-<img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/ddpg4linear.pdf" width="40%">
+<img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/ddpg4linear.png" width="40%">
 </p>
 
 
@@ -196,7 +196,7 @@ Code in **./7.ddpg_for_linear**.
 Testing of 10*5 grid network.
 
 <p align="center">
-<img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/ddpg4grid.png" width="40%">
+<img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/ddpg4grid.png" width="100%">
 </p>
 
 
