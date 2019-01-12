@@ -8,7 +8,7 @@
 
 The states transformation principle is shown in the graph:
 <p align="center">
-<img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/states.png" width="40%">
+<img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/states.png" width="30%">
 </p>
 
 __States__ representation:
@@ -31,7 +31,7 @@ Generally, use `python xxx.py --train` for training and `python xxx.py --test` f
 
 Running the code in different categories:
 
-#### Deep Q-Networks (DQN):
+### Deep Q-Networks (DQN):
 
  **./1.one_way_two_queue**:
 
@@ -53,7 +53,7 @@ Running the code in different categories:
 
 ```python lights_re.py --train/test```
 
-#### Deep Deterministic Policy Gradients (DDPG):
+### Deep Deterministic Policy Gradients (DDPG):
 
 Generally, use `python -m run.py --alg=ddpg --num_timesteps=xxx --train` for training, `python -m run.py --alg=ddpg --num_timesteps=xxx --test` for testing and `python -m run.py --alg=ddpg --num_timesteps=xxx --retrain` for retraining from last saved checkpoint.
 
@@ -67,7 +67,7 @@ Generally, use `python -m run.py --alg=ddpg --num_timesteps=xxx --train` for tra
 
 ## Single Unidirectional Intersection (two roads)
 
-#### Model Description:
+### Model Description:
 
 It is one intersection with only two unidirectional roads, no left or right turning. The number of cars on each road is denoted as ![equ.1](https://latex.codecogs.com/gif.latex?Q_1,&space;Q_2\in&space;I) respectively. The state of the traffic light is denoted by state S, which can be in one of the following four states
 
@@ -88,7 +88,7 @@ According to general transportation principles, the state transition of traffic 
 
 
 
-#### Training:
+### Training:
 
 <p align="center">
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/train.png" width="40%">
@@ -98,7 +98,7 @@ According to general transportation principles, the state transition of traffic 
 Code in  **./1.one_way_two_queue**.
 
 ## Linear-Network Intersections
-#### Model Description:
+### Model Description:
 
 Linear network model is combined with multiple single intersections on a line, as shown in the following graph. Noticing that we don't care much about the outcoming roads, which is denoted by dashed lines.
 
@@ -107,7 +107,7 @@ Linear network model is combined with multiple single intersections on a line, a
 </p>
 
 
-#### Visualized Simulation in Experiments: 
+### Visualized Simulation in Experiments: 
 
 the color of lights is 'green' or 'red' or 'yellow'. The black rectangular represents incoming car for periphery of road networks. The numbers indicates number of cars on each road. If the light is 'green', the number of cars in that road will reduce the number of passing cars after transition. If there is 'black rectangular', the number of cars in the corresponding road will increase one after transition. The upper image is the state before transition, while the lower image is the state after transition. 
 
@@ -116,7 +116,7 @@ the color of lights is 'green' or 'red' or 'yellow'. The black rectangular repre
 </p>
 
 
-#### Training:
+### Training:
 
 <p align="center">
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/train1.png" width="40%">
@@ -127,7 +127,7 @@ Code in **./2.two_intersections(linear)**.
 
 ## Grid-Square-Network Intersections
 
-#### Model Description:
+### Model Description:
 
 <p align="center">
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/grid_square_network.png" width="40%">
@@ -135,14 +135,14 @@ Code in **./2.two_intersections(linear)**.
 
 
 
-#### Visualized Simulation in Experiments: 
+### Visualized Simulation in Experiments: 
 
   <p align="center">
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/4*4.png" width="35%">
   </p>
 
 
-#### Training:
+### Training:
 
  <p align="center">
 <img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/2*2_100m.png" width="40%">
@@ -172,7 +172,7 @@ Basic environments are similar with for DQN, only with main/branch road differen
 ## Single Bidirectional Intersection (four roads)
 
 <p align="center">
-<img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/ddpg4single.png" width="40%">
+<img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/ddpg4single.png" width="80%">
 </p>
 
 
@@ -184,7 +184,7 @@ Basic environments are similar with for DQN, only with main/branch road differen
 Testing of 10*1 linear network.
 
 <p align="center">
-<img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/ddpg4linear.png" width="40%">
+<img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/ddpg4linear.png" width="100%">
 </p>
 
 
