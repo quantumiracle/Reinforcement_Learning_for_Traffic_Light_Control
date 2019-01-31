@@ -315,7 +315,7 @@ if args.train:
     RL.store()
 
 if args.test:
-    RL.test_set()
+    RL.test_set()  # no exploration noise
     cross=crossroads_map()
     visual=Visual()
     obs=[]

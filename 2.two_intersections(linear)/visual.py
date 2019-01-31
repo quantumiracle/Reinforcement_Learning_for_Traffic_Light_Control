@@ -51,20 +51,20 @@ class Visual:
         self.canvas.create_oval(125, 100, 130, 105, fill=cross1_lr) #right
         self.canvas.create_oval(100, 75, 105, 80, fill=cross1_ud) #up
         self.canvas.create_oval(100, 125, 105, 130, fill=cross1_ud) #down
-        self.canvas.create_text(50, 100, text = cross1.car_nums[2],font=("bold", 12),fill = 'black')  #left
-        self.canvas.create_text(100, 50, text = cross1.car_nums[0],font=("bold", 12),fill = 'black')  #up
-        self.canvas.create_text(100, 150, text = cross1.car_nums[1],font=("bold", 12),fill = 'black') #down
+        self.canvas.create_text(50, 100, text = cross1.car_nums[2],font=("bold", 22),fill = 'black')  #left
+        self.canvas.create_text(100, 50, text = cross1.car_nums[0],font=("bold", 22),fill = 'black')  #up
+        self.canvas.create_text(100, 150, text = cross1.car_nums[1],font=("bold", 22),fill = 'black') #down
         # self.canvas.create_text(150, 100, text = '1',fill = 'black')
 
         self.canvas.create_oval(175, 100, 180, 105, fill=cross2_lr) #left 
         self.canvas.create_oval(225, 100, 230, 105, fill=cross2_lr) #right
         self.canvas.create_oval(200, 75, 205, 80, fill=cross2_ud)  #up
         self.canvas.create_oval(200, 125, 205, 130, fill=cross2_ud) #down
-        self.canvas.create_text(250, 100, text = cross2.car_nums[3],font=("bold", 12),fill = 'black')  #right
-        self.canvas.create_text(200, 50, text = cross2.car_nums[0],font=("bold", 12),fill = 'black')   #up
-        self.canvas.create_text(200, 150, text = cross2.car_nums[1],font=("bold", 12),fill = 'black')  #down
-        self.canvas.create_text(150, 75, text = cross2.car_nums[2],font=("bold", 12),fill = 'black')   #left(up)
-        self.canvas.create_text(150, 125, text = cross1.car_nums[3],font=("bold", 12),fill = 'black')  #left(down)
+        self.canvas.create_text(250, 100, text = cross2.car_nums[3],font=("bold", 22),fill = 'black')  #right
+        self.canvas.create_text(200, 50, text = cross2.car_nums[0],font=("bold", 22),fill = 'black')   #up
+        self.canvas.create_text(200, 150, text = cross2.car_nums[1],font=("bold", 22),fill = 'black')  #down
+        self.canvas.create_text(150, 75, text = cross2.car_nums[2],font=("bold", 22),fill = 'black')   #left(up)
+        self.canvas.create_text(150, 125, text = cross1.car_nums[3],font=("bold", 22),fill = 'black')  #left(down)
 
     def visual_peri(self, peri_cars1, peri_cars2):
         if peri_cars1[0]==1:

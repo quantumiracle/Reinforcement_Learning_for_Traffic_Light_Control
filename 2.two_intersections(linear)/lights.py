@@ -15,17 +15,11 @@ np.set_printoptions(threshold=np.inf)
 #print(env.observation_space.shape[0])
 parser = argparse.ArgumentParser(description='Train or test neural net motor controller.')
 parser.add_argument('--train', dest='train', action='store_true', default=False)
-parser.add_argument('--test', dest='test', action='store_true', default=True)
+parser.add_argument('--test', dest='test', action='store_true', default=False)
 args = parser.parse_args()
 
 
 
-RL = DeepQNetwork(n_actions=4,  #2*2
-                  #n_features=env.observation_space.shape[0],
-                  n_features=10, #2*5
-                  learning_rate=0.01, e_greedy=0.9,
-                  replace_target_iter=100, memory_size=2000,
-                  e_greedy_increment=0.001,)
 
 
 
@@ -43,7 +37,13 @@ reward_set=[]
 
 
 if args.train:
-    
+
+    RL = DeepQNetwork(n_actions=4,  #2*2
+                    #n_features=env.observation_space.shape[0],
+                    n_features=10, #2*5
+                    learning_rate=0.01, e_greedy=0.9,
+                    replace_target_iter=100, memory_size=2000,
+                    e_greedy_increment=0.001,)
     
     # hit control:
     # on_hit = False
@@ -66,7 +66,7 @@ if args.train:
     cross1=crossing(light_state=0,q_states=[0,0,0,1])
     cross2=crossing(light_state=0,q_states=[0,0,1,0])
     obs=np.concatenate((cross1.car_nums, cross1.light_state, cross2.car_nums, cross2.light_state),axis=None)
-    for steps in range(200000):
+    for steps in range(20000):
         
         visual.visual_before(cross1, cross2)
 
@@ -88,7 +88,7 @@ if args.train:
         peri_cars1, in_cars1 = cross1.state_change(action1)
 
         peri_cars2, in_cars2 = cross2.state_change(action2)
-        print(peri_cars1, in_cars1, peri_cars2, in_cars2)
+        # print(peri_cars1, in_cars1, peri_cars2, in_cars2)
         
         visual.visual_peri(peri_cars1,peri_cars2)
 
@@ -121,6 +121,12 @@ if args.train:
     plt.show()
     #RL.plot_cost()
 if args.test:
+    RL = DeepQNetwork(n_actions=4,  #2*2
+                    #n_features=env.observation_space.shape[0],
+                    n_features=10, #2*5
+                    learning_rate=0.01, e_greedy=1.,
+                    replace_target_iter=100, memory_size=2000,
+                    e_greedy_increment=None,)
     cross1=crossing(light_state=0,q_states=[0,0,0,1])
     cross2=crossing(light_state=0,q_states=[0,0,1,0])
     RL.restore()

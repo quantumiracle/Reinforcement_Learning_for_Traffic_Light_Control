@@ -43,7 +43,7 @@ Running the code in different categories:
 
 **./3.grid_square_network**:
 
-`python lights.py --train/test`
+`python lights.py --train`
 
 **./4.multithread_for_grid**:
 
@@ -196,8 +196,9 @@ Code in **./7.ddpg_for_linear**.
 Testing of 10*5 grid network.
 
 <p align="center">
-<img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/ddpg4grid.png" width="100%">
+<img src="https://github.com/quantumiracle/DQN_traffic_light_control/blob/master/images/ddpg4grid1.png" width="100%">
 </p>
+
 
 
 

@@ -15,7 +15,7 @@ np.set_printoptions(threshold=np.inf)
 #print(env.observation_space.shape[0])
 parser = argparse.ArgumentParser(description='Train or test neural net motor controller.')
 parser.add_argument('--train', dest='train', action='store_true', default=True)
-parser.add_argument('--test', dest='test', action='store_true', default=True)
+# parser.add_argument('--test', dest='test', action='store_true', default=True)
 args = parser.parse_args()
 
 
@@ -176,49 +176,7 @@ if args.train:
     #RL.plot_cost()
 
     
-# if args.test:
-#     cross1=crossing(light_state=0,q_states=[0,0,0,1])
-#     cross2=crossing(light_state=0,q_states=[0,0,1,0])
-#     RL.restore()
-#     for steps in range(1000):
-#         obs=np.concatenate((cross1.car_nums, cross1.light_state, cross2.car_nums, cross2.light_state),axis=None)
-#         # print(obs)
-#         action=RL.choose_action(obs)
-#         if action == 0:
-#             action1 =0
-#             action2 =0
-#         elif action ==1:
-#             action1 =1
-#             action2 =0
-#         elif action ==2:
-#             action1 =0
-#             action2 =1
-#         elif action ==3:
-#             action1 =1
-#             action2 =1
 
-#         peri_cars1, in_cars1 = cross1.state_change(action1)
-#         peri_cars2, in_cars2 = cross2.state_change(action2)
-#         reward=0
-#         for i in range (4):
-#             if cross2.q_states[i]==1:
-#                 cross2.car_nums[i]+=in_cars1
-#             if cross1.q_states[i]==1:
-#                 cross1.car_nums[i]+=in_cars2
-#             reward = reward - cross1.car_nums[i]**2 - cross2.car_nums[i]**2
-
-#         obs_=np.concatenate((cross1.car_nums, cross1.light_state, cross2.car_nums, cross2.light_state),axis=None)
-
-#         if steps%50==0:
-#             print(reward)
-        
-#         obs=obs_
-#         steps+=1
-#         reward_set.append(reward)
-#         step_set.append(steps)
-#     plt.plot(step_set,reward_set)
-#     plt.savefig('test2.png')
-#     plt.show()
     
 
         
