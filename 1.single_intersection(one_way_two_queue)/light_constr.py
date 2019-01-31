@@ -16,12 +16,7 @@ args = parser.parse_args()
 
 
 
-RL = DeepQNetwork(n_actions=2,
-                  #n_features=env.observation_space.shape[0],
-                  n_features=3,
-                  learning_rate=0.01, e_greedy=0.9,
-                  replace_target_iter=100, memory_size=2000,
-                  e_greedy_increment=0.001,)
+
 
 def env_init():
     Q1=0
@@ -34,6 +29,12 @@ def env_init():
 step_set=[]
 reward_set=[]
 if args.train:
+    RL = DeepQNetwork(n_actions=2,
+                  #n_features=env.observation_space.shape[0],
+                  n_features=3,
+                  learning_rate=0.01, e_greedy=0.9,
+                  replace_target_iter=100, memory_size=2000,
+                  e_greedy_increment=0.001,)
     Q1,Q2,stat=env_init()
     for steps in range(20000):
         if Q1>10 or Q2>10:
@@ -89,6 +90,12 @@ if args.train:
     plt.show()
     #RL.plot_cost()
 if args.test:
+    RL = DeepQNetwork(n_actions=2,
+                #n_features=env.observation_space.shape[0],
+                n_features=3,
+                learning_rate=0.01, e_greedy=1.,
+                replace_target_iter=100, memory_size=2000,
+                e_greedy_increment=None,)
     step_set=[]
     reward_set=[]
     Q1,Q2,stat=env_init()
