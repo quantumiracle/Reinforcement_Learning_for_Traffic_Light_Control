@@ -203,3 +203,15 @@ Testing of 10*5 grid network.
 
 
 Code in **./8.ddpg_for_grid**.
+
+# Citation:
+If you use this repository for any projects, please cite this paper：
+```
+@article{liu2018deep,
+  title={Deep Reinforcement Learning for Intelligent Transportation Systems},
+  author={Liu, Xiao-Yang and Ding, Zihan and Borst, Sem and Walid, Anwar},
+  journal={arXiv preprint arXiv:1812.00979},
+  year={2018}
+}
+
+```
